@@ -1,0 +1,415 @@
+/* Styles généraux */
+body {
+  background-color: #c8b8b8;
+  color: white;
+  font-size: 1rem; /* Utilisez des unités relatives pour la taille de police */
+}
+p {
+  font-family: 'ExtraBold 800',Calibri;
+}
+h2 {
+  font-family: 'EB Garamond',Cambria;
+  text-align: center;
+  text-decoration: underline;
+  color: black;
+}
+h3 {
+  font-family: 'EB Garamond',Cambria;
+}
+a {
+  font-family: 'EB Garamond',Cambria;
+}
+
+li {
+  font-family: 'EB Garamond',Cambria;
+  color: black;
+}
+/* ------------------------------------photo de profil----------------------------------------- */
+.photoProfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Vous pouvez définir une hauteur fixe ou la laisser automatique en fonction de votre mise en page */
+  height: 300px;
+}
+
+img {
+  /* Assurez-vous que votre image a une largeur et une hauteur définies */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  margin-top: 10px; /* Ajoute une marge de 50 pixels en haut du bouton "Me contacter" */
+  margin-bottom: 50px;
+}
+
+.experience-row{
+  margin-top: 1px; /* Ajoute une marge de 50 pixels en haut du bouton "Me contacter" */
+  margin-bottom: 1px;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.me-contacter-button {
+  margin-top: 10px; /* Ajoute une marge de 50 pixels en haut du bouton "Me contacter" */
+  margin-bottom: 5px; /* Ajoute une marge de 50 pixels en bas du bouton "Me contacter" */
+}
+
+
+
+/* ---------------------------------trait vertical------------------------------------------------- */
+
+
+/* Supprimez la bordure à gauche du premier élément .col-md-6 */
+.col-md-6:first-child {
+  border-left: none;
+  border-right: 2px solid #54A07F; /* Ajoutez une bordure à droite du premier élément .col-md-6 */
+}
+
+
+/* -----------------------------le metier avec son trait------------------------------------------- */
+.experience-item h3.metier2,
+.experience-item h3.metier {
+  z-index: 1;
+  border: 2px solid #F44B2F; /* Ajoutez une bordure autour du titre <h3> */
+  padding: 0.5rem; /* Ajoutez un rembourrage à l'intérieur du cadre */
+  margin: 2; /* Supprimez la marge par défaut de l'élément <h3> */
+  border-radius: 10px;
+  box-shadow: 0 0 5px #F44B2F;
+  position: relative; /* Définissez la propriété position sur une valeur autre que static */
+  text-align: center; /* Centrez le texte à l'intérieur de l'élément h3 */
+}
+
+/* Styles pour les éléments d'expérience*/
+.description-item {
+  transition: transform 0.3s ease;
+  background-color: #16d47500;
+  position: relative;
+  z-index: 0;
+  min-height: 1px;
+  overflow: auto; /* Ajoutez une barre de défilement si le contenu dépasse la hauteur spécifiée */
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  margin-bottom: 1rem; /* Ajoutez une marge inférieure pour créer un espace entre les éléments */
+  border-radius: 10px; /* Ajoutez des bords arrondis aux éléments */
+  box-shadow: 0 0 10px #54A07F;
+}
+
+
+
+/* -------------------------------trait horizontal a coté du cadre---------------------------------------------- */
+.experience-item h3.metier:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  width: 18px;
+  height: 2px;
+  background-color: #db6c6c;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+
+.experience-item h3.metier2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -18px;
+  width: 18px;
+  height: 2px;
+  background-color: #db6c6c;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+/* .descriptionPoste-item,
+.experience-item div.competences-acquises,
+.experience-item div.actions,
+.experience-item p.recap {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+} */
+
+.descriptionPoste-item,
+.experience-item div.competences-acquises,
+.experience-item div.actions,
+.experience-item p.recap,
+.experience-item p.entreprises{
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* .descriptionPoste-item, */
+/* .experience-item:hover div.competences-acquises, */
+/* .experience-item:hover div.actions, */
+/*.experience-item:hover p.entreprises,*/
+/* .experience-item:hover p.recap {  */
+  .descriptionPoste-item:hover {
+  opacity: 1;
+  z-index: 2;
+  position: relative; /* Définissez la propriété position sur une valeur autre que static */
+  transition: opacity 0.3s ease;
+  transform: scale(1.2);
+  text-align: center;
+  background-color: #54A07F;
+  /* color: white; */
+  height: 200px;
+  padding: 10px;
+  border-radius: 15px;
+  height: auto; /* Définissez la hauteur sur auto pour afficher le contenu complet au survol */
+  box-shadow: 0 0 10px #54A07F;
+}
+
+
+
+
+
+/* -------------------------------Styles pour les boutons "Me contacter" et "Retour en haut de page" */
+.me-contacter-button
+ {
+  opacity: 1;
+  position: fixed;
+  top: 62px;
+  left: 5px;
+  /* background-color: #EB4405; */
+  background-color: transparent; /* #380e5a;*/
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  box-shadow: 0 0 10px #54A07F;
+}
+.me-contacter-button:hover
+{
+  opacity: 0.8;
+}
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: transparent; /* #380e5a;*/
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  box-shadow: 0 0 10px #EB1C05;
+}
+
+.back-to-top:hover {
+  opacity: 0.8;
+}
+
+.mt-4 {
+  margin-top: 7.5rem !important;
+}
+
+
+/* -------------------------------------------diplome----------------------- */
+/* Styles pour les éléments d'expérience, de formation et de competences */
+
+/* -----------------------------le diplome avec son trait------------------------------------------- */
+.diplomes-item h3.diplome2,
+.diplomes-item h3.diplome {
+  z-index: 0;
+  border: 2px solid #B55F50; /* Ajoutez une bordure autour du titre <h3> */
+  padding: 0.5rem; /* Ajoutez un rembourrage à l'intérieur du cadre */
+  margin: 0; /* Supprimez la marge par défaut de l'élément <h3> */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #B55F50;
+  position: relative; /* Définissez la propriété position sur une valeur autre que static */
+  text-align: center; /* Centrez le texte à l'intérieur de l'élément h3 */
+}
+
+
+/* -------------------------------trait a coté du cadre---------------------------------------------- */
+.diplomes-item h3.diplome:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  width: 18px;
+  height: 2px;
+  background-color: #B55F50;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+
+.diplomes-item h3.diplome2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -18px;
+  width: 18px;
+  height: 2px;
+  background-color: #B55F50;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+
+
+.diplomes-item p.ecole {
+  z-index: 0;
+  border: 2px solid #F44B2F; /* Ajoutez une bordure autour du titre <h3> */
+  padding: 0.5rem; /* Ajoutez un rembourrage à l'intérieur du cadre */
+  margin: 2; /* Supprimez la marge par défaut de l'élément <h3> */
+ 
+  border-radius: 10px;
+  box-shadow: 0 0 5px #F44B2F;
+  position: relative; /* Définissez la propriété position sur une valeur autre que static */
+  text-align: center; /* Centrez le texte à l'intérieur de l'élément h3 */
+}
+
+/* -------------------------------------------compétence----------------------- */
+/* Styles pour les éléments d'expérience, de formation et de competences */
+
+/* -----------------------------la competence avec son trait------------------------------------------- */
+
+
+
+.competences-item h3.competences2,
+.competences-item h3.competences {
+  z-index: 0;
+  border: 2px solid #404B46; /* Ajoutez une bordure autour du titre <h3> */
+  padding: 0.5rem; /* Ajoutez un rembourrage à l'intérieur du cadre */
+  margin: 0; /* Supprimez la marge par défaut de l'élément <h3> */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #404B46;
+  position: relative; /* Définissez la propriété position sur une valeur autre que static */
+  text-align: center; /* Centrez le texte à l'intérieur de l'élément h3 */
+}
+
+
+/* -------------------------------trait a coté du cadre---------------------------------------------- */
+.competences-item h3.competences:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  width: 18px;
+  height: 2px;
+  background-color: #404B46;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+
+.competences-item h3.competences2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -18px;
+  width: 18px;
+  height: 2px;
+  background-color: #404B46;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+.diplomes-item p.ecole {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+.diplomes-item:hover p.ecole {
+  opacity: 1;
+  z-index: 2;
+  position: relative; /* Définissez la propriété position sur une valeur autre que static */
+  transition: opacity 0.3s ease;
+  transform: scale(1.2);
+  text-align: center;
+  /* background-color: #404B46; */
+  /* color: white; */
+  height: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  
+  height: auto; /* Définissez la hauteur sur auto pour afficher le contenu complet au survol */
+
+}
+
+
+
+/* Media queries pour rendre le site responsive */
+@media screen and (max-width: 600px) {
+
+
+  .col-md-6:first-child {
+    border-left: none;
+    border-right: none; /* Ajoutez une bordure à droite du premier élément .col-md-6 */
+  }
+/* ----------------------------enlève le mt4 qui décale---------------------------------- */
+  .mt-4 {
+    margin-top: 0 !important;
+  }
+
+  /* ---------------------supprime le trait a droite et gauche-------------------------- */
+  
+  .competences-item h3.competences:after,
+  .competences-item h3.competences2:after,
+  .diplomes-item h3.diplome:after,
+  .diplomes-item h3.diplome2:after,
+  .experience-item h3.metier:after,
+  .experience-item h3.metier2:after {
+    content: none;
+  }
+/* ------------------------cache les descriptions dans les h3--------------------------- */
+  .compétences,
+  .actions,
+  .entreprises,
+  .recap,
+  .ecole {
+    display: none;
+  }
+
+.experience-item:hover div.competences-acquises,
+.experience-item:hover div.actions,
+.experience-item:hover p.entreprises,
+.experience-item:hover p.recap {
+  opacity: 1;
+  z-index: 2;
+  position: relative; /* Définissez la propriété position sur une valeur autre que static */
+  transition: opacity 0.3s ease;
+  transform: scale(1.0);
+  text-align: center;
+  /* background-color: #db6c6c; */
+  /* color: white; */
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  height: auto; /* Définissez la hauteur sur auto pour afficher le contenu complet au survol */
+
+}
+
+.diplomes-item:hover p.ecole {
+  opacity: 1;
+  z-index: 2;
+  position: relative; /* Définissez la propriété position sur une valeur autre que static */
+  transition: opacity 0.3s ease;
+  transform: scale(1.0);
+  text-align: center;
+  /* background-color: #6c77db; */
+  /* color: white; */
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  height: auto; /* Définissez la hauteur sur auto pour afficher le contenu complet au survol */
+
+}
+  }
+
+
